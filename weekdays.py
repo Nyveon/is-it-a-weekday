@@ -11,9 +11,10 @@ Languages supported:
 def weekday(day: str) -> bool:
     if day[-1] in "ghy":    # German and English
         return day[0] != "s"
-    elif day[-1] in "ie":   # French
-        return day[2] != "m"
-    return day[-1] == "s"   # Spanish
+    elif day[-1] in "ies":  # French and Spanish
+        return day[2] not in "mb"
+    return True  # Unknown language, 5/7 chance to be a weekday
+
 
 
 def weekend(day: str) -> bool:
@@ -65,3 +66,5 @@ if __name__ == "__main__":
             assert weekend(days[i]), f"error with: {days[i]}, returned is weekend: {weekend(days[i])}"
         else:
             assert weekday(days[i]), f"error with: {days[i]}, returned is weekday: {weekday(days[i])}"
+
+    print("Tests ran successfully")
