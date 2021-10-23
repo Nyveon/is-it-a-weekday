@@ -12,7 +12,7 @@ def weekday(day: str) -> bool:
     day = day.lower()
     if day[-1] in "ghy":    # German and English
         return day[0] != "s"
-    elif day[-1] in "ies":  # French and Spanish
+    elif day[-1] in "ieso":  # French and Spanish, Portuguese Weekends
         return day[2] not in "mb"
     return True  # Unknown language, 5/7 chance to be a weekday
 
@@ -58,7 +58,16 @@ if __name__ == "__main__":
         "jeudi",
         "vendredi",
         "samedi",
-        "dimanche"
+        "dimanche",
+        
+        # Portuguese
+        "segunda-feira",
+        "terça-feira",
+        "quarta-feira",
+        "quinta-feira",
+        "sexta-feira",
+        "sábado",
+        "domingo"
     ]
 
     for i in range(len(days)):
