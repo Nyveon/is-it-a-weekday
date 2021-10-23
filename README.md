@@ -35,3 +35,8 @@ Feel free to make a pull request adding the support. Just make sure:
  - All logic is contained in the `weekday()` function.
  - Only letter comparisons are used (No dictionaries with name - boolean pairs or anything like that)
  - Add the names in that language to the testing part of the main section.
+
+
+## WHY?
+
+I realized all days in english end in y, and all week-days in spanish end in s. What a neat coincidence am I right?
