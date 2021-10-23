@@ -7,6 +7,7 @@ Meme-module for "efficiently" checking whether a given day name is a weekday/wee
    - It is a weekday if the first letter is not 's'
  - If it ends in 'i', 'e' or 's' it is Spanish or French
    - It is a weekday if the third letter is not 'm' pr 'b'
+ - Otherwise, it assumes it is a weekday because `statistics`
 
 
 ## What languages does it support?
