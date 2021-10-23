@@ -3,6 +3,9 @@ Meme-module for "efficiently" checking whether a given day name is a weekday/wee
 
 
 ## How does it determine the answer?
+
+![Flow chart](./flowchart.drawio.svg)
+
  - If it ends in 'g', 'h', or 'y' it is English or German
    - It is a weekday if the first letter is not 's'
  - If it ends in 'i', 'e' or 's' it is Spanish or French, or a Portuguese Weekend
