@@ -5,7 +5,7 @@ Meme-module for "efficiently" checking whether a given day name is a weekday/wee
 ## How does it determine the answer?
  - If it ends in 'g', 'h', or 'y' it is English or German
    - It is a weekday if the first letter is not 's'
- - If it ends in 'i', 'e' or 's' it is Spanish or French
+ - If it ends in 'i', 'e' or 's' it is Spanish or French, or a Portuguese Weekend
    - It is a weekday if the third letter is not 'm' pr 'b'
  - Otherwise, it assumes it is a weekday because `statistics`
 
@@ -15,6 +15,7 @@ Meme-module for "efficiently" checking whether a given day name is a weekday/wee
  - Spanish
  - German
  - French
+ - Portuguese
  - Other languages may or may not work. (Most likely they won't)
 
 
