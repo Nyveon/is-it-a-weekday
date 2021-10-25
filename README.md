@@ -24,10 +24,13 @@ Meme-module for "efficiently" checking whether a given day name is a weekday/wee
 
 ## Usage
 
+### Python:
 `weekday()` Receives a string containing only the name of the day. Returns True if it is the name of a weekday, False if it is the name of a weekend, and an True or False if it is not a supported language or not the name of a day. 
 
 `weekend()` Shortcut for `not weekday()`
 
+### Ruby:
+Currently working on this.
 
 ## Want to add support for more languages?
 
