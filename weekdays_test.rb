@@ -1,7 +1,7 @@
 ##
 # Tests the weekday.rb script with relevant input
 
-require "./weekday.rb"
+require "./weekdays.rb"
 include IsItAWeekday
 
 def test_languages
@@ -68,6 +68,8 @@ def test_languages
       raise "Error" unless weekday?(days[i])
     end
   end
+
+  puts "Tests ran successfully."
 end
 
 
