@@ -7,14 +7,14 @@ Languages supported:
 -French
 """
 
-
+#todo: update diagram
 def weekday(day: str) -> bool:
     day = day.lower()
-    if day[-1] in "ghy":    # German and English
+    if day[-1] in "ghy":
         return day[0] != "s"
-    elif day[-1] in "ieso":  # French and Spanish, Portuguese Weekends
+    elif day[-1] in "iesoa":
         return day[2] not in "mb"
-    return True  # Unknown language, 5/7 chance to be a weekday
+    return True
 
 
 def weekend(day: str) -> bool:
@@ -23,52 +23,7 @@ def weekend(day: str) -> bool:
 
 if __name__ == "__main__":
     """ Mainly testing for new languages here """
-    days = [
-        # Spanish
-        "lunes",
-        "martes",
-        "miercoles",
-        "jueves",
-        "viernes",
-        "sabado",
-        "domingo",
-
-        # English
-        "monday",
-        "tuesday",
-        "wednesday",
-        "thursday",
-        "friday",
-        "saturday",
-        "sunday",
-
-        # German
-        "montag",
-        "dienstag",
-        "mittwoch",
-        "donnerstag",
-        "freitag",
-        "samstag",
-        "sonntag",
-
-        # French
-        "lundi",
-        "mardi",
-        "mercredi",
-        "jeudi",
-        "vendredi",
-        "samedi",
-        "dimanche",
-        
-        # Portuguese
-        "segunda-feira",
-        "terça-feira",
-        "quarta-feira",
-        "quinta-feira",
-        "sexta-feira",
-        "sábado",
-        "domingo"
-    ]
+    days = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "montag", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "sonntag", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
 
     for i in range(len(days)):
         if i % 7 >= 5:
