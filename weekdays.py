@@ -10,7 +10,7 @@ Languages supported:
 
 def weekday(day: str) -> bool:
     """
-    Checks if a string si the name of a weekday in the supported languages.
+    Checks if a string is the name of a weekday in the supported languages.
     :param day: Any string, ideally one that actually represents a day
     :return: True if it is a weekday.
     """
@@ -24,9 +24,9 @@ def weekday(day: str) -> bool:
 
 def weekend(day: str) -> bool:
     """
-    Checks if a string si the name of a weekend in the supported languages.
+    Checks if a string is the name of a weekend in the supported languages.
     :param day: Any string, ideally one that actually represents a day
-    :return: True if it is a weekend..
+    :return: True if it is a weekend.
     """
     return not weekday(day)
 
