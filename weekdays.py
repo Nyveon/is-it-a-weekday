@@ -7,8 +7,13 @@ Languages supported:
 -French
 """
 
-#todo: update diagram
+
 def weekday(day: str) -> bool:
+    """
+    Checks if a string si the name of a weekday in the supported languages.
+    :param day: Any string, ideally one that actually represents a day
+    :return: True if it is a weekday.
+    """
     day = day.lower()
     if day[-1] in "ghy":
         return day[0] != "s"
@@ -18,17 +23,11 @@ def weekday(day: str) -> bool:
 
 
 def weekend(day: str) -> bool:
+    """
+    Checks if a string si the name of a weekend in the supported languages.
+    :param day: Any string, ideally one that actually represents a day
+    :return: True if it is a weekend..
+    """
     return not weekday(day)
 
 
-if __name__ == "__main__":
-    """ Mainly testing for new languages here """
-    days = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "montag", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "sonntag", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
-
-    for i in range(len(days)):
-        if i % 7 >= 5:
-            assert weekend(days[i]), f"error with: {days[i]}, returned is weekend: {weekend(days[i])}"
-        else:
-            assert weekday(days[i]), f"error with: {days[i]}, returned is weekday: {weekday(days[i])}"
-
-    print("Tests ran successfully")
